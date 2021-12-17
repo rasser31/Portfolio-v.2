@@ -53,7 +53,7 @@ body{
 
 .grid-container-about{
     grid-template-columns: 200px 450px 450px;
-    grid-template-rows:  200px 125px 300px 300px;
+    grid-template-rows:  200px 125px 450px 450px;
     grid-template-areas: 
     "logo name name"
     "back subject subject"
@@ -131,8 +131,20 @@ body{
 .subject-img-inner{
     float: left;
     margin: 0;
+    margin-bottom: 90px;
     width: 15rem;
     height: 15rem;
+}
+
+.subject-img-middle{
+    margin-bottom: 20px;
+}
+
+.subject-img-bottom{
+    float: left;
+    margin: 35px;
+    width: 10rem;
+    height: 10rem
 }
 
 .subject-title{
@@ -162,9 +174,13 @@ body{
 
 .subject-text{
     float: right;
-    width: 434px;
+    width: 394px;
+    height: 400px;
     margin: 20px;
+    padding: 20px;
     border: var(--text-border);
+    background-color: #fff;
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
 }
 
 .grid-container div,a,img{
