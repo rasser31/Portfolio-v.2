@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'ace';
+    font-family: ace;
     src: url('/fonts/ace-records/AceRecords.ttf');
 }
 
 @font-face {
-    font-family: 'dragon';
+    font-family: dragon;
     src: url('/fonts/dragon-fire/DragonFire.ttf');
 }
 
@@ -14,16 +14,18 @@
     --border-radius: 25px;
     --border-shadow: 15px 15px 3px rgba(0,0,0,0.3);
     --border-inner-shadow: inset 15px 15px 3px rgba(0,0,0,0.3);
-    --text-shadow: 10px 10px rgba(0,0,0,0.3);
+    --header-shadow: 10px 10px rgba(0,0,0,0.3);
+    --text-shadow: 5px 5px rgba(0,0,0,0.3);
     --text-border: 1px #88FBFF;
     --font-size-title: 5.5em;
-    --font-size-subject: 1em;
+    --font-size-subject: 3em;
     --font-size-links: 2em;
     --font-size-text: 1em;
+    --text-underline: underline;
 }
 
 body{
-    background-image: url("images/background/background.jpg");
+    background-image: url("images/more/background.jpg");
     background-attachment: fixed;
     background-position: 0 20%;
     background-repeat: no-repeat;
@@ -33,7 +35,7 @@ body{
     text-align: center;
     margin: 50px;
     display: grid;
-    grid-template-columns: 200px 30% 30%;
+    grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 200px 200px 200px 200px 200px 200px;
     grid-template-areas: 
     "logo name name"
@@ -47,7 +49,7 @@ body{
 
 .logo{
     grid-area: logo;
-    margin: 30px;
+    width: 130px;
 }
 
 .name{
@@ -60,14 +62,14 @@ body{
     padding-top: 15px;
     font-family: ace;
     font-size: 5.5em;
-    text-shadow: var(--text-shadow);
+    text-shadow: var(--header-shadow);
+    text-decoration-line: var(--text-underline);
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: #88FBFF;
 }
 
 .about{
     grid-area: about;
-    margin: 30px;
     padding-top: 25px;
 }
 
@@ -75,27 +77,45 @@ body{
     text-decoration: none;
     color: black;
     font-size: var(--font-size-links);
+    text-shadow: var(--text-shadow);
     font-family: dragon;
 }
 
 .web{
     grid-area: web;
-    margin: 30px;
 }
 
 .design{
     grid-area: design;
-    margin: 30px;
 }
 
 .game{
     grid-area: game;
-    margin: 30px;
 }
 
-.grid-container div,a{
+.subject-img{
+    width: 12rem;
+    height: 12rem;
+}
+
+.subject-title{
+    font-family: dragon;
+    text-shadow: var(--text-shadow);
+    font-size: var(--font-size-subject);
+}
+
+.subject-button{
+    font-family: dragon;
+    font-size: var(--font-size-links);
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.grid-container div,a,img{
     background-color: var(--box-background-color);
     border: var(--border-color);
     border-radius: var(--border-radius);
     box-shadow: var(--border-shadow), var(--border-inner-shadow);
+    margin: 30px;
 }
