@@ -1,11 +1,11 @@
 @font-face {
     font-family: ace;
-    src: url('/fonts/ace-records/AceRecords.ttf');
+    src: url('fonts/ace-records/AceRecords.ttf');
 }
 
 @font-face {
     font-family: dragon;
-    src: url('/fonts/dragon-fire/DragonFire.ttf');
+    src: url('fonts/dragon-fire/DragonFire.ttf');
 }
 
 :root{
@@ -15,11 +15,12 @@
     --border-shadow: 15px 15px 3px rgba(0,0,0,0.3);
     --border-inner-shadow: inset 15px 15px 3px rgba(0,0,0,0.3);
     --header-shadow: 10px 10px rgba(0,0,0,0.3);
-    --text-shadow: 5px 5px rgba(0,0,0,0.3);
-    --text-border: 1px #88FBFF;
+    --text-shadow: 5px 5px rgba(5, 1, 1, 0.3);
+    --text-border: 3px solid #88FBFF;
     --font-size-title: 5.5em;
     --font-size-subject: 3em;
     --font-size-links: 2em;
+    --font-size-back-btn: 2.5rem;
     --font-size-text: 1em;
     --text-underline: underline;
 }
@@ -35,6 +36,9 @@ body{
     text-align: center;
     margin: 50px;
     display: grid;
+}
+
+.grid-container-main{
     grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 200px 200px 200px 200px 200px 200px;
     grid-template-areas: 
@@ -45,6 +49,16 @@ body{
     ". game ."
     ". game ."
     ". game .";
+}
+
+.grid-container-about{
+    grid-template-columns: 200px 450px 450px;
+    grid-template-rows:  200px 125px 300px 300px;
+    grid-template-areas: 
+    "logo name name"
+    "back subject subject"
+    ". subject subject"
+    ". subject subject";
 }
 
 .logo{
@@ -73,12 +87,22 @@ body{
     padding-top: 25px;
 }
 
-.about{
+.back{
+    grid-area: back;
+    padding-top: 25px;
+}
+
+.about,.back{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-size: var(--font-size-links);
     text-shadow: var(--text-shadow);
     font-family: dragon;
+}
+
+.back{
+    padding: 5px;
+    font-size: var(--font-size-back-btn);
 }
 
 .web{
@@ -93,26 +117,65 @@ body{
     grid-area: game;
 }
 
+.subject{
+    grid-area: subject;
+    padding: 50px;
+}
+
 .subject-img{
+    margin: 50px;
     width: 12rem;
     height: 12rem;
 }
 
+.subject-img-inner{
+    float: left;
+    margin: 0;
+    width: 15rem;
+    height: 15rem;
+}
+
 .subject-title{
+    margin: 0;
+    margin-bottom: 40px;
     font-family: dragon;
     text-shadow: var(--text-shadow);
     font-size: var(--font-size-subject);
+    text-decoration-line: var(--text-underline);
+}
+
+.subject-title-inner{
+    font-size: var(--font-size-title);
+    text-shadow: var(--header-shadow);
+    margin: 0;
 }
 
 .subject-button{
     font-family: dragon;
     font-size: var(--font-size-links);
+    text-shadow: var(--text-shadow);
+    text-decoration-line: var(--text-underline);
     text-decoration: none;
-    color: black;
-    padding: 10px;
+    color: #000;
+    padding: 15px;
+}
+
+.subject-text{
+    float: right;
+    width: 434px;
+    margin: 20px;
+    border: var(--text-border);
 }
 
 .grid-container div,a,img{
+    background-color: var(--box-background-color);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+    margin: 30px;
+}
+
+.grid-container-subject div,a,img{
     background-color: var(--box-background-color);
     border: var(--border-color);
     border-radius: var(--border-radius);
