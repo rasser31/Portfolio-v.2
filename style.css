@@ -44,8 +44,8 @@ body{
     grid-template-areas: 
     "logo name name"
     "about web design"
-    ". web design"
-    ". web design"
+    "contact web design"
+    "contact web design"
     ". game ."
     ". game ."
     ". game .";
@@ -54,6 +54,16 @@ body{
 .grid-container-about{
     grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 125px 450px 450px;
+    grid-template-areas: 
+    "logo name name"
+    "back subject subject"
+    ". subject subject"
+    ". subject subject";
+}
+
+.grid-container-designs{
+    grid-template-columns: 200px 450px 450px;
+    grid-template-rows:  200px 125px 550px 550px;
     grid-template-areas: 
     "logo name name"
     "back subject subject"
@@ -103,6 +113,25 @@ body{
 .back{
     padding: 5px;
     font-size: var(--font-size-back-btn);
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.contact p{
+    font-family: dragon;
+}
+
+.contact-title{
+    font-size: 2em;
+    text-decoration-line: underline;
+    margin-bottom: 0;
+}
+
+.contact-filler{
+    margin: 0;
+    font-size: 1.15em;
 }
 
 .web{
