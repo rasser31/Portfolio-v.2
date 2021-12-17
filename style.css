@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'ace';
+    src: url('/fonts/ace-records/AceRecords.ttf');
+}
+
+@font-face {
+    font-family: 'dragon';
+    src: url('/fonts/dragon-fire/DragonFire.ttf');
+}
+
+:root{
+    --box-background-color: #00BEC5;
+    --border-color: 5px solid #88FBFF;
+    --border-radius: 25px;
+    --border-shadow: 15px 15px 3px rgba(0,0,0,0.3);
+    --border-inner-shadow: inset 15px 15px 3px rgba(0,0,0,0.3);
+    --text-shadow: 10px 10px rgba(0,0,0,0.3);
+    --text-border: 1px #88FBFF;
+    --font-size-title: 5.5em;
+    --font-size-subject: 1em;
+    --font-size-links: 2em;
+    --font-size-text: 1em;
+}
+
+body{
+    background-image: url("images/background/background.jpg");
+    background-attachment: fixed;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+}
+
+.grid-container{
+    text-align: center;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 200px 30% 30%;
+    grid-template-rows:  200px 200px 200px 200px 200px 200px 200px;
+    grid-template-areas: 
+    "logo name name"
+    "about web design"
+    ". web design"
+    ". web design"
+    ". game ."
+    ". game ."
+    ". game .";
+}
+
+.logo{
+    grid-area: logo;
+    margin: 30px;
+}
+
+.name{
+    grid-area: name;
+    margin: 30px;
+}
+
+.name h1{
+    margin: auto;
+    padding-top: 15px;
+    font-family: ace;
+    font-size: 5.5em;
+    text-shadow: var(--text-shadow);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #88FBFF;
+}
+
+.about{
+    grid-area: about;
+    margin: 30px;
+    padding-top: 25px;
+}
+
+.about{
+    text-decoration: none;
+    color: black;
+    font-size: var(--font-size-links);
+    font-family: dragon;
+}
+
+.web{
+    grid-area: web;
+    margin: 30px;
+}
+
+.design{
+    grid-area: design;
+    margin: 30px;
+}
+
+.game{
+    grid-area: game;
+    margin: 30px;
+}
+
+.grid-container div,a{
+    background-color: var(--box-background-color);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+}
