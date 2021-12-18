@@ -225,7 +225,7 @@ body{
 @media screen and (max-width: 1200px) {
     body{
         background-position: 0 0;
-        -webkit-appearance: none;
+        background-size: 500%;
     }
 
     .grid-container{
