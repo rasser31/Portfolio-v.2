@@ -387,22 +387,22 @@ body{
 
     /* The styling change of the text inside the "about me" information boxes */
     .about-text{
-        height: 510px;
+        height: 525px;
     }
 
     /* The styling change of the text inside the "web - coding" information boxes */
     .web-text{
-        height: 360px;
+        height: 375px;
     }
 
     /* The styling change of the text inside the "designs" information boxes */
     .design-text{
-        height: 660px;
+        height: 675px;
     }
 
     /* The styling change of the text inside the "game making" information boxes */
     .game-text{
-        height: 435px;
+        height: 450px;
     }
 
     /* A removal of the float that is used in the desktop version of the sub-pages */
