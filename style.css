@@ -301,7 +301,7 @@ body{
     /* The redefining of the grid, so that it works on mobile */
     .grid-container-main{
         grid-template-columns: 100%;
-        grid-template-rows:  200px 100px 500px 500px 575px;
+        grid-template-rows:  200px 100px 500px 500px 500px;
         grid-template-areas: 
         "name"
         "about"
@@ -343,7 +343,7 @@ body{
     }
 
     .subject-title{
-        text-shadow: 3px 3px rgba(0,0,0,0.15);
+        text-shadow: 5px 5px rgba(0,0,0,0.15);
     }
 
     /* A change in the box styling, plus a font-size change. This makes it fit better on mobile */
