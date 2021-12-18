@@ -64,7 +64,7 @@ body{
 /* The grid container I use for my about.html */
 .grid-container-about{
     grid-template-columns: 200px 450px 450px;
-    grid-template-rows:  200px 125px 550px;
+    grid-template-rows:  200px 125px 500px;
     grid-template-areas: 
     "logo name name"
     "back subject subject"
@@ -241,8 +241,9 @@ body{
     box-shadow: var(--border-shadow), var(--border-inner-shadow);
 }
 
+/* Box that shapes the height of the information box in about.html */
 .about-text{
-    height: 300px;
+    height: 275px;
 }
 
 /* The removal of some styling, so that I can use a :hover and :active on them */
@@ -300,7 +301,7 @@ body{
     /* The redefining of the grid, so that it works on mobile */
     .grid-container-main{
         grid-template-columns: 100%;
-        grid-template-rows:  200px 100px 500px 500px 500px;
+        grid-template-rows:  200px 100px 500px 500px 575px;
         grid-template-areas: 
         "name"
         "about"
@@ -312,7 +313,7 @@ body{
     /* The redefining of the grid inside the about.html, so that it is usable on mobile */
     .grid-container-about{
         grid-template-columns: 100%;
-        grid-template-rows:  200px 100px 1500px;
+        grid-template-rows:  200px 100px 1000px;
         grid-template-areas: 
         "name"
         "back"
@@ -339,6 +340,10 @@ body{
         font-size: 3.5rem;
         margin: 0;
         text-shadow: 5px 5px rgba(0,0,0,0.3);
+    }
+
+    .subject-title{
+        text-shadow: 3px 3px rgba(0,0,0,0.15);
     }
 
     /* A change in the box styling, plus a font-size change. This makes it fit better on mobile */
@@ -378,6 +383,26 @@ body{
     .subject-text{
         margin: 20px;
         width:inherit
+    }
+
+    /* The styling change of the text inside the "about me" information boxes */
+    .about-text{
+        height: 500px;
+    }
+
+    /* The styling change of the text inside the "web - coding" information boxes */
+    .web-text{
+        height: 350px;
+    }
+
+    /* The styling change of the text inside the "designs" information boxes */
+    .design-text{
+        height: 650px;
+    }
+
+    /* The styling change of the text inside the "game making" information boxes */
+    .game-text{
+        height: 425px;
     }
 
     /* A removal of the float that is used in the desktop version of the sub-pages */
