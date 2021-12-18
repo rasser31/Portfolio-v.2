@@ -312,7 +312,7 @@ body{
     /* The redefining of the grid inside the about.html, so that it is usable on mobile */
     .grid-container-about{
         grid-template-columns: 100%;
-        grid-template-rows:  200px 100px 900px;
+        grid-template-rows:  200px 100px 1500px;
         grid-template-areas: 
         "name"
         "back"
