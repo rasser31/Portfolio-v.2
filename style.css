@@ -397,12 +397,12 @@ body{
 
     /* The styling change of the text inside the "designs" information boxes */
     .design-text{
-        height: 700px;
+        height: 710px;
     }
 
     /* The styling change of the text inside the "game making" information boxes */
     .game-text{
-        height: 425px;
+        height: 475px;
     }
 
     /* A removal of the float that is used in the desktop version of the sub-pages */
