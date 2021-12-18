@@ -15,7 +15,7 @@
     --border-shadow: 15px 15px 3px rgba(0,0,0,0.3);
     --border-inner-shadow: inset 15px 15px 3px rgba(0,0,0,0.3);
     --header-shadow: 10px 10px rgba(0,0,0,0.3);
-    --text-shadow: 5px 5px rgba(5, 1, 1, 0.3);
+    --text-shadow: 5px 5px rgba(0,0,0,0.3);
     --text-border: 3px solid #88FBFF;
     --font-size-title: 5.5em;
     --font-size-subject: 3em;
@@ -224,7 +224,7 @@ body{
 
 @media screen and (max-width: 1200px) {
     body{
-        background-position: 75% 50%;
+        background-position: 0 0;
     }
 
     .grid-container{
@@ -273,12 +273,17 @@ body{
     .name h1{
         font-size: 3.5rem;
         margin: 0;
+        text-shadow: 5px 5px rgba(0,0,0,0.3);
     }
 
     .about, .back{
         width: 50%;
         justify-self: center;
         font-size: 1.5em;
+    }
+
+    .about, .back, .subject-title, .subject-button{
+        text-shadow: 3px 3px rgba(0,0,0,0.3);
     }
 
     .back{
