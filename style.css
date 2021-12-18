@@ -1,13 +1,21 @@
+/* --------- */
+/* style.CSS */
+/* --------- */
+
+/* The font I use for my header */
 @font-face {
     font-family: ace;
     src: url('fonts/ace-records/AceRecords.ttf');
 }
 
+/* The font I use for my text around the sites */
 @font-face {
     font-family: dragon;
     src: url('fonts/dragon-fire/DragonFire.ttf');
 }
 
+/* My roots I use thoughout the CSS document */
+/* I made it, because I use them more than once. This makes it easier to find and change if needed  */
 :root{
     --box-background-color: #00BEC5;
     --border-color: 5px solid #88FBFF;
@@ -25,18 +33,21 @@
     --text-underline: underline;
 }
 
+/* The body of my sites. Here I implement my background */
 body{
     background-image: url("images/more/background.jpg");
     background-attachment: fixed;
     background-position: 0 20%;
 }
 
+/* My grid containers general information */
 .grid-container{
     text-align: center;
     margin: 50px;
     display: grid;
 }
 
+/* The grid container I use for my index.site */
 .grid-container-main{
     grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 200px 400px 600px;
@@ -47,6 +58,7 @@ body{
     ". game .";
 }
 
+/* The grid container I use for my about.html */
 .grid-container-about{
     grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 125px 900px;
@@ -56,6 +68,7 @@ body{
     ". subject subject";
 }
 
+/* The grid container I use for my other sites, where I show my different forms of work experience */
 .grid-container-designs{
     grid-template-columns: 200px 450px 450px;
     grid-template-rows:  200px 125px 1100px;
@@ -65,15 +78,18 @@ body{
     ". subject subject";
 }
 
+/* The grid definition for my logo */
 .logo{
     grid-area: logo;
     width: 130px;
 }
 
+/* The grid definition of my title/header */
 .name{
     grid-area: name;
 }
 
+/* The styling of my title/header */
 .name h1{
     margin: auto;
     padding-top: 15px;
@@ -81,75 +97,87 @@ body{
     font-size: 5.5em;
     text-shadow: var(--header-shadow);
     text-decoration-line: var(--text-underline);
+
+    /* ----------- https://css-tricks.com/adding-stroke-to-web-text/ ----------- */
+    /* Here I have made an outline around the actual text. ^^^ Source link above */
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: #88FBFF;
 }
 
+/* The grid definition of my "more about me" button */
 .about{
     grid-area: about;
     padding-top: 25px;
 }
 
+/* The grid definition and styling of my back button (Usable on the sub-sites ) */
 .back{
     grid-area: back;
     padding-top: 25px;
-}
-
-.about,.back{
-    text-decoration: none;
-    color: #000;
-    font-size: var(--font-size-links);
-    text-shadow: var(--text-shadow);
-    font-family: dragon;
-}
-
-.back{
     padding: 5px;
     font-size: var(--font-size-back-btn);
 }
 
+/* Styling of the "more about me" button and "back" button */
+.about,.back{
+    text-decoration: none;
+    color: #000;
+    font-size: var(--font-size-links);
+    font-family: dragon;
+}
+
+/* The grid definition of the contact box */
 .contact{
     grid-area: contact;
 }
 
+/* Font styling of the paragraph inside of the contact box */
 .contact p{
     font-family: dragon;
 }
 
+/* The styling for the title of the contact box */
 .contact-title{
     font-size: 2em;
     text-decoration-line: underline;
     margin-bottom: 0;
 }
 
+/* Defining the font size of the e-mail and number of the contact box */
 .contact-filler{
     margin: 0;
     font-size: 1.15em;
 }
 
+/* The grid definition of the subject box (web)  */
 .web{
     grid-area: web;
 }
 
+/* The grid definition of the subject box (design) */
 .design{
     grid-area: design;
 }
 
+/* The grid definition of the subject box (game) */
 .game{
     grid-area: game;
 }
 
+/* The grid definition of the subject box (Box inside of sub-sites) */
 .subject{
     grid-area: subject;
     padding: 50px;
 }
 
+/* Sizing the picture inside of the boxes with the different subjects */
 .subject-img{
     margin: 50px;
     width: 12rem;
     height: 12rem;
 }
 
+/* The first picture located inside the sub-pages */
 .subject-img-inner{
     float: left;
     margin: 0;
@@ -158,10 +186,12 @@ body{
     height: 15rem;
 }
 
+/* The second picture located inside the sub-pages  */
 .subject-img-middle{
     margin-bottom: 20px;
 }
 
+/* The bottom pictures located inside the sub-pages */
 .subject-img-bottom{
     float: left;
     margin: 35px;
@@ -169,6 +199,7 @@ body{
     height: 10rem
 }
 
+/* The subject title that can be found on the main index.html */
 .subject-title{
     margin: 0;
     margin-bottom: 40px;
@@ -178,22 +209,24 @@ body{
     text-decoration-line: var(--text-underline);
 }
 
+/* The subject title that can be found on the sub-pages */
 .subject-title-inner{
     font-size: var(--font-size-title);
     text-shadow: var(--header-shadow);
     margin: 0;
 }
 
+/* The styling for the button you use to access the sub-pages */
 .subject-button{
     font-family: dragon;
     font-size: var(--font-size-links);
-    text-shadow: var(--text-shadow);
     text-decoration-line: var(--text-underline);
     text-decoration: none;
     color: #000;
     padding: 15px;
 }
 
+/* The text-boxes, where you can read about the different subjects */
 .subject-text{
     float: right;
     width: 394px;
@@ -205,42 +238,59 @@ body{
     box-shadow: var(--border-shadow), var(--border-inner-shadow);
 }
 
+/* The removal of some styling, so that I can use a :hover and :active on them */
 .about, .back, .subject-button{
     background-color: #74faff;
+    box-shadow: inset 0;
 }
 
-.about:hover, .back:hover, .subject-button:hover{
-    background-color: #bdfdff;
-}
-
+/* Some styling of the different elements inside the grid container */
 .grid-container div,a,img{
     background-color: var(--box-background-color);
     border: var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+    box-shadow: var(--border-shadow);
     margin: 30px;
 }
 
+/* Some styling of the different elements where links are not included */
+.grid-container div,img{
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+}
+
+/* Some styling of the different elements inside the grid container (Inside the different subjects sub-pages) */
 .grid-container-subject div,a,img{
     background-color: var(--box-background-color);
     border: var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+    box-shadow: var(--border-shadow);
     margin: 30px;
 }
 
+/* Some styling of the different elements where links are not included (Inside the different subjects sub-pages) */
+.grid-container-subject div,img{
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+}
+
+/* Here I apply the hover state onto all of my buttons, both the ones on the main site, plus the sub-pages */
+.about:hover, .back:hover, .subject-button:hover{
+    background-color: #bdfdff;
+}
+
+/* Here I apply the active state (When you click it, it changes) onto all of my buttons, both the ones on the main site, plus the sub-pages */
+.about:active, .back:active, .subject-button:active{
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--border-shadow), var(--border-inner-shadow);
+}
+
+/* Here I start coding my portfolio, so that it also works on a mobile */
 @media screen and (max-width: 1200px) {
-    body{
-        background-position: 0 0;
-        height: 1000%;
-    }
-
+    /* Here I change the margin of my grid container, so that it fits the mobile format better */
     .grid-container{
-        text-align: center;
         margin: 20px;
-        display: grid;
     }
 
+    /* The redefining of the grid, so that it works on mobile */
     .grid-container-main{
         grid-template-columns: 100%;
         grid-template-rows:  200px 100px 500px 500px 500px;
@@ -252,6 +302,7 @@ body{
         "game";
     }
 
+    /* The redefining of the grid inside the about.html, so that it is usable on mobile */
     .grid-container-about{
         grid-template-columns: 100%;
         grid-template-rows:  200px 100px 900px;
@@ -261,6 +312,7 @@ body{
         "subject";
     }
 
+    /* The redefining of the grid inside the subjects, so that they are usable on mobile */
     .grid-container-designs{
         grid-template-columns: 100%;
         grid-template-rows:  200px 100px;
@@ -270,56 +322,63 @@ body{
         "subject";
     }
 
+    /* To make the logo and contact box to disappear from the sites (Mobile version) */
     .logo, .contact{
         display: none;
     }
 
+    /* The restyling of the header/title on the different pages */
     .name h1{
         font-size: 3.5rem;
         margin: 0;
         text-shadow: 5px 5px rgba(0,0,0,0.3);
     }
 
+    /* A change in the box styling, plus a font-size change. This makes it fit better on mobile */
     .about, .back{
         width: 50%;
         justify-self: center;
         font-size: 1.5em;
     }
 
-    .about, .back, .subject-title, .subject-button{
-        text-shadow: 3px 3px rgba(0,0,0,0.3);
-    }
-
+    /* The resizing of the text inside the "back" button */
     .back{
         font-size: 2em;
         padding-top: 15px;
     }
 
+    /* A small styling of the subject box inside the sub-pages */
     .subject{
         padding: 0;
     }
 
+    /* A small styling change in the pictures inside the sub-pages */
     .subject-img{
         margin: 25px;
     }
 
+    /* Another styling change in the sub-pages pictures */
     .subject-img-inner{
         float:inherit;
     }
 
+    /* A change on the font size of the title on the sub-pages */
     .subject-title-inner{
         font-size: 3em;
     }
 
+    /* The styling change of the text inside the subjects information boxes */
     .subject-text{
         margin: 20px;
         width:inherit
     }
 
+    /* A removal of the float that is used in the desktop version of the sub-pages */
     .grid-container-designs .subject-text{
         float: none;
     }
 
+    /* A sizing change in the pictures located on the different sub-pages */
     .grid-container-designs .subject-img,.subject-img-bottom{
         float: inherit;
         margin: 0;
@@ -328,6 +387,7 @@ body{
         height: 15rem;
     }
 
+    /* A margin change on the grid container */
     .grid-container div,a,img{
         margin: 10px;
     }
