@@ -64,7 +64,7 @@ body{
 /* The grid container I use for my about.html */
 .grid-container-about{
     grid-template-columns: 200px 450px 450px;
-    grid-template-rows:  200px 125px 900px;
+    grid-template-rows:  200px 125px 550px;
     grid-template-areas: 
     "logo name name"
     "back subject subject"
@@ -239,6 +239,10 @@ body{
     border: var(--text-border);
     background-color: #fff;
     box-shadow: var(--border-shadow), var(--border-inner-shadow);
+}
+
+.about-text{
+    height: 300px;
 }
 
 /* The removal of some styling, so that I can use a :hover and :active on them */
