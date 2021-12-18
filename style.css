@@ -47,6 +47,9 @@ body{
     display: grid;
 }
 
+
+/* The grids throughout the code, has used this video as a form of start, since I could not get it to work my self. YouTube link can be found below */
+/* https://www.youtube.com/watch?v=HgwCeNVPlo0&t=1015s&ab_channel=DaniKrossing */
 /* The grid container I use for my index.site */
 .grid-container-main{
     grid-template-columns: 200px 450px 450px;
