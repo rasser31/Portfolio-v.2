@@ -58,7 +58,7 @@ body{
     "logo name name"
     "about web design"
     "contact web design"
-    ". game .";
+    ". game spacetravel";
 }
 
 /* The grid container I use for my about.html */
@@ -94,6 +94,7 @@ body{
 
 /* The styling of my title/header */
 .name h1{
+    color: #fff;
     margin: auto;
     padding-top: 15px;
     font-family: ace;
@@ -165,6 +166,10 @@ body{
 /* The grid definition of the subject box (game) */
 .game{
     grid-area: game;
+}
+
+.spacetravel{
+    grid-area: spacetravel;
 }
 
 /* The grid definition of the subject box (Box inside of sub-sites) */
@@ -301,13 +306,14 @@ body{
     /* The redefining of the grid, so that it works on mobile */
     .grid-container-main{
         grid-template-columns: 100%;
-        grid-template-rows:  200px 100px 500px 500px 500px;
+        grid-template-rows:  200px 100px 500px 500px 500px 500px;
         grid-template-areas: 
         "name"
         "about"
         "web"
         "design"
-        "game";
+        "game"
+        "spacetravel";
     }
 
     /* The redefining of the grid inside the about.html, so that it is usable on mobile */
@@ -403,6 +409,11 @@ body{
     /* The styling change of the text inside the "game making" information boxes */
     .game-text{
         height: 475px;
+    }
+
+    /* The styling change of the text inside the "space travel (IST)" information boxes */
+    .spacetravel-text{
+        height: 600px;
     }
 
     /* A removal of the float that is used in the desktop version of the sub-pages */
